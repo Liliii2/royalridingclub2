@@ -1,0 +1,241 @@
+html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0d2818;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #e0e0e0;
+            line-height: 1.5;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #05100a;
+            padding: 15px;
+            border-bottom: 2px solid #d4af37;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d4af37;
+            margin-right: 15px;
+        }
+
+        nav .nav-gombok {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav button {
+            color: #ffffff;
+            padding: 8px 12px;
+            border: 1px solid #d4af37;
+            background-color: #0d2818;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        nav button:hover {
+            background-color: #d4af37;
+            color: #000000;
+            transform: scale(1.05);
+        }
+
+        .kontener {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .szekcio {
+            padding-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .kartya {
+            background-color: #05100a;
+            border: 1px solid #d4af37;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .kartya img {
+            max-width: 100%;
+            height: auto;
+            max-height: 350px;
+            display: block;
+            margin: 0 auto 10px;
+            border: 1px solid #d4af37;
+        }
+
+        .lovak-racs {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .lo-kartya {
+            background-color: #05100a;
+            border: 1px solid #d4af37;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .lo-kartya h3 {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .lo-kartya p {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .lo-kartya img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border: 1px solid #d4af37;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        /* Responsive breakpoints for horses grid */
+        @media (max-width: 1024px) {
+            .lovak-racs {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .lovak-racs {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #d4af37;
+            box-sizing: border-box;
+        }
+
+        .gomb {
+            background-color: #d4af37;
+            color: #000000;
+            padding: 8px 15px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .gomb:hover {
+            background-color: #C5A059;
+            transform: scale(1.03);
+        }
+
+        .jatek-racs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        .jatek-kartya {
+            background-color: #05100a;
+            border: 1px solid #d4af37;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #d4af37;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+        }
+
+        .jatek-kartya:hover {
+            background-color: #0d2818;
+            transform: scale(1.05);
+        }
+
+        .jatek-kartya.talalt {
+            background-color: #0d2818;
+            border: 2px solid #d4af37;
+        }
+
+        .jatek-kartya.hibas {
+            background-color: #05100a;
+            border: 2px solid #ff4d4d;
+        }
+
+        footer {
+            background-color: #05100a;
+            color: #f3e5ab;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #d4af37;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #d4af37;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .vissza-tetejere {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #d4af37;
+            color: #000000;
+            padding: 12px 18px;
+            border: 1px solid #05100a;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+            transition: all 0.2s ease;
+            border-radius: 5px;
+            z-index: 1001;
+        }
+
+        .vissza-tetejere:hover {
+            background-color: #ffffff;
+            transform: scale(1.1);
+        }

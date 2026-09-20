@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Riding Club - Örökbefogadás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="teteje">
+        <div class="logo">♛ Royal Riding Club</div>
+        <div class="nav-gombok">
+            <button onclick="gordul('fooldal')">Főoldal</button>
+            <button onclick="gordul('orokbefogadas')">Örökbefogadható lovak</button>
+            <button onclick="gordul('jatek')">Szerencsejáték</button>
+        </div>
+    </nav>
+
+    <div class="kontener">
+        <div id="fooldal" class="szekcio">
+            <h1>Üdvözöljük az Örökbefogadó Központban!</h1>
+            
+            <div class="kartya">
+                <h2>Hírek és Újdonságok</h2>
+                <marquee behavior="alternate" scrollamount="5">
+                    <img src="rrc.jpg"  style="height: 50px; width: auto; border: 1px solid #d4af37; margin: 0;" onerror="this.src='https://placehold.co/100x50/05100a/d4af37?text=RRC'">
+                </marquee>
+                <p>Azon fáradozunk, hogy minden lovunknak szerető gazdát találjunk. Válasszon egyet a védenceink közül, és fogadja örökbe még ma!</p>
+            </div>
+        </div>
+
+        <div id="orokbefogadas" class="szekcio">
+            <h1>Örökbefogadható Lovak</h1>
+
+            <div class="lovak-racs">
+                <!-- 1. Ló -->
+                <div class="lo-kartya">
+                    <img src="1.jpg" alt="Royal Monarch" onerror="this.src='https://placehold.co/200x120/0d2818/d4af37?text=Royal+Monarch'">
+                    <h3>1. Royal Monarch</h3>
+                    <p>Angol telivér</p>
+                    <button class="gomb" onclick="orokbefogadElinvital('Royal Monarch')">Örökbefogadás</button>
+                </div>
+
+                <!-- 2. Ló -->
+                <div class="lo-kartya">
+                    <img src="2.jpeg" alt="Blue Lagoon" onerror="this.src='https://placehold.co/200x120/0d2818/d4af37?text=Blue+Lagoon'">
+                    <h3>2. Blue Lagoon</h3>
+                    <p>Holsteini</p>
+                    <button class="gomb" onclick="orokbefogadElinvital('Blue Lagoon')">Örökbefogadás</button>
+                </div>
+
+                <!-- 3. Ló -->
+                <div class="lo-kartya">
+                    <img src="3.jpg" alt="Gold Duch" onerror="this.src='https://placehold.co/200x120/0d2818/d4af37?text=Gold+Duch'">
+                    <h3>3. Gold Duch</h3>
+                    <p>Hannoveri</p>
+                    <button class="gomb" onclick="orokbefogadElinvital('Gold Duch')">Örökbefogadás</button>
+                </div>
+
+                <!-- 4. Ló -->
+                <div class="lo-kartya">
+                    <img src="4.jpg" alt="Windstorm" onerror="this.src='https://placehold.co/200x120/0d2818/d4af37?text=Windstorm'">
+                    <h3>4. Windstorm</h3>
+                    <p>Arab telivér</p>
+                    <button class="gomb" onclick="orokbefogadElinvital('Windstorm')">Örökbefogadás</button>
+                </div>
+
+                <!-- 5. Ló -->
+                <div class="lo-kartya">
+                    <img src="5.jpg" alt="Black Moon" onerror="this.src='https://placehold.co/200x120/0d2818/d4af37?text=Black+Moon'">
+                    <h3>5. Black Moon</h3>
+                    <p>Friesian</p>
+                    <button class="gomb" onclick="orokbefogadElinvital('Black Moon')">Örökbefogadás</button>
+                </div>
+
+                <!-- 6. Ló -->
+                <div class="lo-kartya">
+                    <img src="6.jpg" alt="Green Silver" onerror="this.src='https://placehold.co/200x120/0d2818/d4af37?text=Green+Silver'">
+                    <h3>6. Green Silver</h3>
+                    <p>KWPN</p>
+                    <button class="gomb" onclick="orokbefogadElinvital('Green Silver')">Örökbefogadás</button>
+                </div>
+
+                <!-- 7. Ló -->
+                <div class="lo-kartya">
+                    <img src="7.jpg" alt="Blueberry Ice" onerror="this.src='https://placehold.co/200x120/0d2818/d4af37?text=Blueberry+Ice'">
+                    <h3>7. Blueberry Ice</h3>
+                    <p>Svéd melegvérű</p>
+                    <button class="gomb" onclick="orokbefogadElinvital('Blueberry Ice')">Örökbefogadás</button>
+                </div>
+
+                <!-- 8. Ló -->
+                <div class="lo-kartya">
+                    <img src="8.jpg" alt="Mister Cloud" onerror="this.src='https://placehold.co/200x120/0d2818/d4af37?text=Mister+Cloud'">
+                    <h3>8. Mister Cloud</h3>
+                    <p>Lipicai</p>
+                    <button class="gomb" onclick="orokbefogadElinvital('Mister Cloud')">Örökbefogadás</button>
+                </div>
+
+                <!-- 9. Ló -->
+                <div class="lo-kartya">
+                    <img src="9.jpg" alt="Silver Shadow" onerror="this.src='https://placehold.co/200x120/0d2818/d4af37?text=Silver+Shadow'">
+                    <h3>9. Silver Shadow</h3>
+                    <p>Nóniusz</p>
+                    <button class="gomb" onclick="orokbefogadElinvital('Silver Shadow')">Örökbefogadás</button>
+                </div>
+
+                <!-- 10. Ló -->
+                <div class="lo-kartya">
+                    <img src="10.jpg" alt="Golden Star" onerror="this.src='https://placehold.co/200x120/0d2818/d4af37?text=Golden+Star'">
+                    <h3>10. Golden Star</h3>
+                    <p>Gidrán</p>
+                    <button class="gomb" onclick="orokbefogadElinvital('Golden Star')">Örökbefogadás</button>
+                </div>
+            </div>
+
+            <div id="urlap-doboz" class="kartya" style="display: none; margin-top: 20px;">
+                <h2>Örökbefogadási adatlap: <span id="kivalasztott-lo-neve" style="color: #d4af37;"></span></h2>
+                
+                <label>Teljes név (csak betűk):</label>
+                <input type="text" id="nev" oninput="csakBetu(this)" placeholder="Minta János">
+
+                <label>Város (csak betűk):</label>
+                <input type="text" id="varos" oninput="csakBetu(this)" placeholder="Budapest">
+
+                <label>Utca (csak betűk):</label>
+                <input type="text" id="utca" oninput="csakBetu(this)" placeholder="Fő utca">
+
+                <label>Házszám (csak számok):</label>
+                <input type="text" id="hazszam" oninput="csakSzam(this)" placeholder="12">
+
+                <label>Irányítószám (csak számok):</label>
+                <input type="text" id="iranyitoszam" oninput="csakSzam(this)" placeholder="1011">
+
+                <button onclick="foglalasVeglegesitese()" class="gomb" style="padding: 12px;">Lefoglalás beküldése</button>
+
+                <p style="margin-top: 15px;">
+                    További információt itt kérjen, adategyeztetés: 
+                    <a href="mailto:royalridingclub7@gmail.com" style="color: #d4af37; font-weight: bold; text-decoration: underline;">royalridingclub7@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="kartya" style="margin-top: 20px;">
+                <h2>Lefoglalt lovak:</h2>
+                <div id="lefoglalt-lovak-lista">
+                    <p>Még nincs lefoglalt ló.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="jatek" class="szekcio">
+            <h1>Kártyaválasztó Játék</h1>
+            <p>Találd meg mind a 8 répát! Ha a rossz kártyára kattintasz, a játék újraindul.</p>
+            
+            <div class="jatek-racs" id="jatek-racs">
+                <!-- Javascript fills cards -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Ha probléma merülne fel, írjon nekünk: 
+            <a href="mailto:royalridingclub7@gmail.com">royalridingclub7@gmail.com</a>
+        </p>
+    </footer>
+
+
+    <script>
+        function gordul(elemId) {
+            document.getElementById(elemId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        let kivalasztottLo = "";
+
+        function orokbefogadElinvital(loNev) {
+            kivalasztottLo = loNev;
+            document.getElementById('kivalasztott-lo-neve').innerText = loNev;
+            
+            let urlap = document.getElementById('urlap-doboz');
+            urlap.style.display = 'block';
+            urlap.scrollIntoView({ behavior: 'smooth' });
+        }
+
+      
+        function csakBetu(input) {
+            input.value = input.value.replace(/[^a-zA-ZáéiíoóöőuúüűÁÉIÍOÓÖŐUÚÜŰ\s]/g, '');
+        }
+
+   
+        function csakSzam(input) {
+            input.value = input.value.replace(/[^0-9]/g, '');
+        }
+
+        function foglalasVeglegesitese() {
+            let nev = document.getElementById('nev').value;
+            let varos = document.getElementById('varos').value;
+            let utca = document.getElementById('utca').value;
+            let hazszam = document.getElementById('hazszam').value;
+            let iranyitoszam = document.getElementById('iranyitoszam').value;
+
+            if (nev == "" || varos == "" || utca == "" || hazszam == "" || iranyitoszam == "") {
+                alert("Kérjük, töltsön ki minden mezőt!");
+                return;
+            }
+
+            let lista = document.getElementById('lefoglalt-lovak-lista');
+            if (lista.innerHTML.includes("Még nincs lefoglalt ló.")) {
+                lista.innerHTML = "";
+            }
+
+            lista.innerHTML += "<p><strong>" + kivalasztottLo + "</strong> - Foglaló: " + nev + " (" + iranyitoszam + " " + varos + ", " + utca + " " + hazszam + ".)</p>";
+
+            alert("Sikeres foglalás!");
+            
+          
+            document.getElementById('nev').value = "";
+            document.getElementById('varos').value = "";
+            document.getElementById('utca').value = "";
+            document.getElementById('hazszam').value = "";
+            document.getElementById('iranyitoszam').value = "";
+            document.getElementById('urlap-doboz').style.display = 'none';
+        }
+
+      
+        let kartyak = [];
+        let talaltJok = 0;
+
+        function jatekKezdes() {
+            talaltJok = 0;
+            let racs = document.getElementById('jatek-racs');
+            racs.innerHTML = "";
+
+           
+            kartyak = ['jo', 'jo', 'jo', 'jo', 'jo', 'jo', 'jo', 'jo', 'rossz'];
+            kartyak.sort(function() { return 0.5 - Math.random(); });
+
+            for (let i = 0; i < 9; i++) {
+                let kartyaElem = document.createElement('div');
+                kartyaElem.className = 'jatek-kartya';
+                kartyaElem.innerText = '🥕'; 
+                kartyaElem.onclick = function() { kartyaKattintas(this, kartyak[i]); };
+                racs.appendChild(kartyaElem);
+            }
+        }
+
+        function kartyaKattintas(elem, tipus) {
+            if (elem.classList.contains('talalt') || elem.classList.contains('hibas')) {
+                return;
+            }
+
+            if (tipus === 'rossz') {
+                elem.classList.add('hibas');
+                elem.innerText = '❌';
+                alert("Rossz! Újraindul a játék.");
+                jatekKezdes();
+            } else {
+                elem.classList.add('talalt');
+                elem.innerText = '🥕';
+                talaltJok++;
+
+                if (talaltJok === 8) {
+                    alert("Gratulálunk, nyertél!");
+                    jatekKezdes(); 
+                }
+            }
+        }
+
+        jatekKezdes();
+    </script>
+</body>
+</html>
