@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="hu">
+<head>
+    <title>Royal Riding Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">♛ Royal Riding Club</div>
+        <button onclick="nyit('fooldal')">Főoldal</button>
+        <button onclick="nyit('versenyek')">Versenyek</button>
+        <button onclick="nyit('lovak')">Lovak</button>
+        <button onclick="nyit('fogadas')">Fogadás</button>
+        <button onclick="nyit('eredmenyek')">Eredmények</button>
+    </nav>
+
+    <div id="fooldal" class="oldal mukodik">
+        <h1>Üdvözöljük a Royal Riding Clubban!</h1>
+        <div class="kartya">
+            <h2>Hogyan tud fogadni?</h2>
+            <p>1. Kattintson a felső menüsorban a <strong>Fogadás</strong> gombra!</p>
+            <p>2. Válassza ki a kedvenc lovát és a versenytípust a legördülő menüből!</p>
+            <p>3. Írja be a megtenni kívánt tét összegét a mezőbe!</p>
+            <p>4. Kattintson a <strong>Fogadás elküldése</strong> gombra a rögzítéshez!</p>
+            <p>5. Az <strong>Eredmények</strong> menüpont alatt azonnal láthatja, hogy a fogadása nyert-e!</p>
+        </div>
+        <div class="kartya">
+            <h2>Hírességek és érdekességek</h2>
+            <h3>1. Kincsem, a csodakanca</h3>
+            <p>Kincsem a magyar lósport büszkesége, a világ legsikeresebb versenylova. Pályafutása során 54 versenyen indult, és mind az 54-et megnyerte! Ezzel a teljesítményével bekerült a Guinness Rekordok Könyvébe is.</p>
+
+            <h3>2. Overdose, a Magyar Rakéta</h3>
+            <p>Overdose a 2000-es évek legsikeresebb magyar versenylova volt. Sorozatban 12 futamot nyert meg Európa legrangosabb pályáin, villámgyors vágtájáról és megalkuvást nem tűrő küzdőszelleméről vált ismertté.</p>
+
+            <h3>3. A lóversenyzés etikettje</h3>
+            <p>A lóversenyzés nemcsak a gyorsaságról, hanem az eleganciáról is szól. A nagy nemzetközi futamokon hagyomány a kiöltözés, a hölgyeknél a különleges kalapok viselése, a VIP páholyokban pedig a pezsgőzés.</p>
+        </div>
+    </div>
+
+    <div id="versenyek" class="oldal">
+        <h1>Versenytípusaink</h1>
+        <div class="kartya">
+            <h3>Díjugratás</h3>
+            <p>Klasszikus akadálypályás verseny, ahol a ló és a lovas összhangja, a precíz ugrási technika és az időeredmény dönt a győzelemről.</p>
+        </div>
+        <div class="kartya">
+            <h3>Arany Galopp</h3>
+            <p>A leggyorsabb futam, ahol a lovak maximális sebességgel vágtáznak a célvonalig. igazi közönségkedvenc száguldás.</p>
+        </div>
+        <div class="kartya">
+            <h3>Királyi Ügető</h3>
+            <p>Hagyományos futam, ahol a hajtók kétkerekű kocsiban (szulki) ülve irányítják a lovakat, melyeknek végig szabályos ügetésben kell haladniuk.</p>
+        </div>
+        <div class="kartya">
+            <h3>Rövidtávú Sprint</h3>
+            <p>1000 méter alatti villámgyors futam, ahol a robbanékonyság a legfontosabb. Itt egyetlen másodperces hiba is a győzelembe kerülhet.</p>
+        </div>
+        <div class="kartya">
+            <h3>Éjszakai Mesterfutam</h3>
+            <p>Különleges esti verseny reflektorfényben, ahol a klub legjobb lovai mérik össze erejüket egy látványos hangulatú futamban.</p>
+        </div>
+    </div>
+
+    <div id="lovak" class="oldal">
+        <h1>A Klub Bajnokai</h1>
+        <div class="kartya">
+            <img src="angol-teliver.png" alt="Ló">
+            <h3>Royal Monarch</h3>
+            <p>Angol telivér. Rendkívül gyors és kitartó fajta, a hosszabb távú galoppversenyek abszolút esélyese.</p>
+        </div>
+        <div class="kartya">
+            <img src="holstein.jpg" alt="Ló">
+            <h3>Blue Lagoon</h3>
+            <p>Holsteini fajta. Nyugodt vérmérsékletű, intelligens ló, aki a díjugrató pályákon nyújt kiemelkedő teljesítményt.</p>
+        </div>
+        <div class="kartya">
+            <img src="hannoveri.jpg" alt="Ló">
+            <h3>Gold Duch</h3>
+            <p>Hannoveri sportló. Erőteljes felépítésű, kiváló rugózású ló, aki az ügetőversenyek egyik legnagyobb sztárja.</p>
+        </div>
+        <div class="kartya">
+            <img src="arabteli.jpg" alt="Ló">
+            <h3>Windstorm</h3>
+            <p>Arab telivér. Elegáns megjelenésű, villámgyors sprintló, aki a rövid távokon verhetetlen.</p>
+        </div>
+        <div class="kartya">
+            <img src="friz.jpg" alt="Ló">
+            <h3>Black Moon</h3>
+            <p>Friesian fajta. Lenyűgöző fekete sörényű, látványos mozgású ló, aki az éjszakai mesterfutamok közönségkedvence.</p>
+        </div>
+    </div>
+
+    <div id="fogadas" class="oldal">
+        <h1>Tét Elhelyezése</h1>
+        <div class="kartya">
+            <label>Válasszon Lovat:</label>
+            <select id="lo">
+                <option>Royal Monarch</option>
+                <option>Blue Lagoon</option>
+                <option>Gold Duch</option>
+                <option>Windstorm</option>
+                <option>Black Moon</option>
+            </select>
+
+            <label>Válasszon Versenytípust:</label>
+            <select id="verseny">
+                <option>Díjugratás</option>
+                <option>Arany Galopp</option>
+                <option>Királyi Ügető</option>
+                <option>Rövidtávú Sprint</option>
+                <option>Éjszakai Mesterfutam</option>
+            </select>
+
+            <label>Tét összege (Ft):</label>
+            <input type="number" id="tet" placeholder="Pl. 2000">
+
+            <button onclick="fogadasMentese()" class="gomb">Fogadás elküldése</button>
+        </div>
+
+        <div class="kartya">
+            <h2>Saját fogadásaim:</h2>
+            <div id="fogadasom-helye"></div>
+        </div>
+    </div>
+
+    <div id="eredmenyek" class="oldal">
+        <h1>Eredmények</h1>
+        <p>Itt láthatja a rögzített fogadásainak sorsolási eredményét:</p>
+        <!-- Ide kerülnek a véletlenszerű eredmények -->
+        <div id="eredmeny-helye"></div>
+    </div>
+
+    <script>
+ 
+        function nyit(oldalNev) {
+            // Elrejtünk minden oldalt
+            document.getElementById('fooldal').className = 'oldal';
+            document.getElementById('versenyek').className = 'oldal';
+            document.getElementById('eredmenyek').className = 'oldal';
+            document.getElementById('lovak').className = 'oldal';
+            document.getElementById('fogadas').className = 'oldal';
+
+            document.getElementById(oldalNev).className = 'oldal mukodik';
+        }
+
+        function fogadasMentese() {
+            let lo = document.getElementById('lo').value;
+            let verseny = document.getElementById('verseny').value;
+            let tet = document.getElementById('tet').value;
+
+            if (tet == "") {
+                alert("Kérlek írj be egy tétet!");
+                return;
+            }
+
+            document.getElementById('fogadasom-helye').innerHTML += 
+                "<p><strong>" + lo + "</strong> - " + verseny + " (" + tet + " Ft tét)</p>";
+
+            let veletlen = Math.random(); 
+
+            if (veletlen > 0.5) {
+                document.getElementById('eredmeny-helye').innerHTML += 
+                    "<div class='kartya' style='border-left: 5px solid green; color: green;'><strong>" + lo + "</strong> NYERT a " + verseny + " futamon!</div>";
+            } else {
+                document.getElementById('eredmeny-helye').innerHTML += 
+                    "<div class='kartya' style='border-left: 5px solid red; color: red;'><strong>" + lo + "</strong> sajnos NEM nyert a " + verseny + " futamon.</div>";
+            }
+
+            document.getElementById('tet').value = "";
+            alert("Fogadás sikeresen rögzítve!");
+        }
+    </script>
+</body>
+</html>
