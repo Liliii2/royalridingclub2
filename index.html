@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="rrc.jpg">
 <body>
-    <!-- FEJLÉC -->
+ 
     <header>
         <div class="logo">♛ Royal Riding Club</div>
         <nav>
+            <a href="#arlista">Árlista & Csomagok</a>
             <a href="#lovak">Lovaink</a>
             <a href="#edzok">Edzőink</a>
             <a href="#foglalas">Időpontfoglalás</a>
@@ -19,13 +20,70 @@
 
     <div class="container">
         
-        <!-- ÜDVÖZLŐ DOBOZ -->
+     
         <div class="hero">
             <h1>Üdvözöljük a Royal Riding Clubban!</h1>
-            <p>Válassza ki kedvenc lovát és edzőjét a prémium oktatáshoz!</p>
+            <p>Tekintse meg szolgáltatásainkat, majd válassza ki kedvenc lovát és edzőjét a prémium oktatáshoz!</p>
         </div>
 
-        <!-- LOVAK SZEKCIÓ -->
+<h2 id="arlista" class="cim">Árlista & Csomagok</h2>
+<div class="grid-arlista">
+    
+    <div class="kartya ar-kartya">
+        <div class="ar-ikon">🐎</div>
+        <h3>Keztő / Gyerek Oktatás</h3>
+        <div class="ar-osszeg">6 500 Ft <span>/ 30 perc</span></div>
+        <ul class="ar-szolgaltatasok">
+            <li>Futószáras oktatás</li>
+            <li>Alapvető lóápolás megtanulása</li>
+            <li>Védőfelszerelés biztosítása</li>
+            <li>Türelem és szakképzett oktató</li>
+        </ul>
+        <button onclick="document.getElementById('foglalas').scrollIntoView({ behavior: 'smooth' });">Időpontot Foglalok</button>
+    </div>
+
+    <div class="kartya ar-kartya kiemelt-ar">
+        <div class="nepszeru-jelveny">Legnépszerűbb</div>
+        <div class="ar-ikon">🏇</div>
+        <h3>Haladó / Egyéni Edzés</h3>
+        <div class="ar-osszeg">9 500 Ft <span>/ 50 perc</span></div>
+        <ul class="ar-szolgaltatasok">
+            <li>Díjugratás vagy Díjlovaglás</li>
+            <li>Személyre szabott edzésterv</li>
+            <li>Választható prémium ló</li>
+            <li>Saját vagy klub lóval is</li>
+        </ul>
+        <button onclick="document.getElementById('foglalas').scrollIntoView({ behavior: 'smooth' });">Időpontot Foglalok</button>
+    </div>
+
+    <div class="kartya ar-kartya">
+        <div class="ar-ikon">🎟️</div>
+        <h3>10 Alkalmas Bérlet</h3>
+        <div class="ar-osszeg">80 000 Ft <span>/ 10 alkalom</span></div>
+        <ul class="ar-szolgaltatasok">
+            <li>3 hónapig érvényes</li>
+            <li>Bármelyik edzőnél felhasználható</li>
+            <li>Rugalmas időpontfoglalás</li>
+            <li>15% kedvezmény a bérleti díjból</li>
+        </ul>
+        <button onclick="document.getElementById('foglalas').scrollIntoView({ behavior: 'smooth' });">Bérlet Választása</button>
+    </div>
+
+    <div class="kartya ar-kartya">
+        <div class="ar-ikon">🏞️</div>
+        <h3>Tereplovaglás</h3>
+        <div class="ar-osszeg">12 000 Ft <span>/ 90 perc</span></div>
+        <ul class="ar-szolgaltatasok">
+            <li>Vezetett túra a természetben</li>
+            <li>Csak haladó lovasoknak</li>
+            <li>Gyönyörű erdei útvonalak</li>
+            <li>Kísérőedző biztosítása</li>
+        </ul>
+        <button onclick="document.getElementById('foglalas').scrollIntoView({ behavior: 'smooth' });">Időpontot Foglalok</button>
+    </div>
+
+</div>
+
         <h2 id="lovak" class="cim">Lovaink</h2>
         <div class="grid-lovak">
             
@@ -101,7 +159,6 @@
 
         </div>
 
-        <!-- EDZŐK SZEKCIÓ -->
         <h2 id="edzok" class="cim">Edzőink</h2>
         <div class="grid-edzok">
             <div class="kartya">
@@ -126,7 +183,6 @@
             </div>
         </div>
 
-        <!-- IDŐPONTFOGLALÁSI ŰRLAP -->
         <h2 id="foglalas" class="cim">Időpontfoglalás</h2>
         <div class="kartya" style="text-align: left; max-width: 600px; margin: 0 auto;">
             
@@ -136,16 +192,23 @@
             <label>Kiválasztott Edző:</label>
             <input type="text" id="edzo-input" placeholder="Kattints egy edzőre a listából" readonly>
 
-            <label>Teljes Név:</label>
-            <input type="text" id="nev" placeholder="Pl. Horváth Viktória">
+            <label>Teljes név:</label>
+            <input type="text" id="nev" oninput="csakBetu(this)" pattern="[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+" placeholder="pl:Lovas Lóránt" required>
 
-            <label>Telefonszám (06-tal kezdődjön):</label>
-            <input type="text" id="tel" placeholder="06301234567">
+            <label>Telefonszám:</label>
+            <input type="text" id="tel" placeholder="pl:06301234567">
+
+            <label>Időpont:</label>
+            <select id="idopont">
+            <option value="09:00">09:00 - 10:00</option>
+            <option value="10:00">10:00 - 11:00</option>
+            <option value="14:00">14:00 - 15:00</option>
+            <option value="16:00">16:00 - 17:00</option>
+            </select>
 
             <button onclick="foglalasBekuldese()" style="font-size: 16px; padding: 12px;">Foglalás Rögzítése</button>
         </div>
 
-        <!-- VISSZAJELZÉS DOBOZ -->
         <div id="visszajelzes" class="kartya" style="display: none; margin-top: 25px; border-color: #55ff55;">
             <h3 style="color: #55ff55; margin-top: 0;">Sikeres Foglalás!</h3>
             <p id="foglalas-reszletek" style="line-height: 1.6;"></p>
@@ -153,14 +216,11 @@
 
     </div>
 
-    <!-- LÁBLÉC -->
     <footer>
         <p>Royal Riding Club &copy; 2026 | Kapcsolat: <a href="mailto:royalridingclub7@gmail.com">royalridingclub7@gmail.com</a></p>
     </footer>
 
-    <!-- EGYSZERŰ JAVASCRIPT LOGIKA -->
     <script>
-        // Ló kiválasztása
         function valasztLot(loNev) {
             document.getElementById('lo-input').value = loNev;
             document.getElementById('foglalas').scrollIntoView({ behavior: 'smooth' });
