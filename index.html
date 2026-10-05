@@ -221,6 +221,15 @@
     </footer>
 
     <script>
+        function csakBetu(input) {
+            input.value = input.value.replace(/[^a-zA-ZáéiíoóöőuúüűÁÉIÍOÓÖŐUÚÜŰ\s]/g, '');
+        }
+
+        function csakSzam(input) {
+            input.value = input.value.replace(/[^0-9]/g, '');
+        }
+
+
         function valasztLot(loNev) {
             document.getElementById('lo-input').value = loNev;
             document.getElementById('foglalas').scrollIntoView({ behavior: 'smooth' });
@@ -231,35 +240,49 @@
             document.getElementById('edzo-input').value = edzoNev;
             document.getElementById('foglalas').scrollIntoView({ behavior: 'smooth' });
         }
+        
+          function tel(input) {
+            input.value = input.value.replace(/[^0-9]/g, '');
+          }
 
-        // Foglalás ellenőrzése és leintézése
-        function foglalasBekuldese() {
-            let lo = document.getElementById('lo-input').value;
-            let edzo = document.getElementById('edzo-input').value;
-            let nev = document.getElementById('nev').value;
-            let tel = document.getElementById('tel').value;
+       
+       function csakSzam(input) {
+    input.value = input.value.replace(/[^0-9]/g, '');
+}
 
-            // Ellenőrzések
-            if (lo === "") {
-                alert("Kérjük, válassz egy lovat!");
-                return;
-            }
-            if (edzo === "") {
-                alert("Kérjük, válassz egy edzőt!");
-                return;
-            }
-            if (nev === "") {
-                alert("Kérjük, add meg a nevedet!");
-                return;
-            }
-            if (!tel.startsWith("06")) {
-                alert("A telefonszámnak 06-tal kell kezdődnie!");
-                return;
-            }
+// 2. A foglalást intéző függvény
+function foglalasBekuldese() {
+    let lo = document.getElementById('lo-input').value;
+    let edzo = document.getElementById('edzo-input').value;
+    let nev = document.getElementById('nev').value;
+    let tel = document.getElementById('tel').value;
+
+    // Ellenőrzések
+    if (lo === "") {
+        alert("Kérjük, válassz egy lovat!");
+        return;
+    }
+
+    if (edzo === "") {
+        alert("Kérjük, válassz egy edzőt!");
+        return;
+    }
+
+    if (nev === "") {
+        alert("Kérjük, add meg a nevedet!");
+        return;
+    }
+
+    // Telefonszám ellenőrzése: HA NEM 06-tal kezdődik VAGY NEM 11 karakter hosszú
+    if (!tel.startsWith("06") || tel.length !== 11) {
+        alert("A telefonszámnak 06-tal kell kezdődnie és pontosan 11 számjegyből kell állnia!");
+        return;
+    }
 
             // Visszajelzés megjelenítése
             let visszajelzesDoboz = document.getElementById('visszajelzes');
             let reszletek = document.getElementById('foglalas-reszletek');
+}
 
             reszletek.innerText = "Kedves " + nev + "! Sikeresen lefoglaltad " + lo + " nevű lovunkat " + edzo + " edzőhöz. Hamarosan hívunk a " + tel + " telefonszámon az időpont egyeztetése miatt!";
             visszajelzesDoboz.style.display = "block";
